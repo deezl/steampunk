@@ -59,12 +59,17 @@ minetest.register_node("steampunk:wood", {
 	sounds = default.node_sound_wood_defaults(),
 })
 
+minetest.register_node("steampunk:junglewood", {
+	description = "Steampunk Jungle Wood Planks",
+	tiles = {"steampunk_junglewood.png"},
+	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	sounds = default.node_sound_wood_defaults(),
+})
+
 minetest.register_node("steampunk:torch", {
 	description = "Steampunk Torch",
 	drawtype = "torchlike",
 	tiles = {"steampunk_torch_on_floor.png", "steampunk_torch_on_ceiling.png", "steampunk_torch.png"},
-	
-	
 	inventory_image = "steampunk_torch_on_floor.png",
 	wield_image = "steampunk_torch_on_floor.png",
 	paramtype = "light",
@@ -377,6 +382,14 @@ minetest.register_node("steampunk:steelblock", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("steampunk:steelpanel", {
+	description = "Steampunk Steel Panel",
+	tiles = {"steampunk_steelpanel.png"},
+	is_ground_content = true,
+	groups = {cracky=1,level=2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("steampunk:mese", {
 	description = "Steampunk Mese Block",
 	tiles = {"steampunk_mese.png"},
@@ -422,7 +435,7 @@ doors.register_door("steampunk:door_steampunk_iron", {
 
 minetest.register_node("steampunk:stonebrick", {
 	description = "Steampunk Stone Brick",
-	tiles = {"steampunk_stone_brick.png"},
+	tiles = {"steampunk_stonebrick.png"},
 	groups = {cracky=2, stone=1},
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -435,9 +448,9 @@ minetest.register_node("steampunk:brick", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node("steampunk:brick", {
+minetest.register_node("steampunk:brick_grey", {
 	description = "Steampunk Grey Brick Block",
-	tiles = {"dsteampunk_brick_grey.png"},
+	tiles = {"steampunk_brick_grey.png"},
 	is_ground_content = false,
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
@@ -472,7 +485,7 @@ minetest.register_node("steampunk:trapdoor", {
 	description = "Trapdoor",
 	inventory_image = "steampunk_trapdoor.png",
 	drawtype = "nodebox",
-	tiles = "steampunk_trapdoor.png",
+	tiles = {"steampunk_trapdoor.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=2,door=1},
@@ -496,7 +509,7 @@ minetest.register_node("steampunk:trapdoor", {
 
 minetest.register_node("steampunk:trapdoor_open", {
 	drawtype = "nodebox",
-	tiles = "steampunk_trapdoor.png",
+	tiles = {"steampunk_trapdoor.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	pointable = true,
@@ -523,6 +536,16 @@ minetest.register_node("steampunk:table", {
 	tiles = {"steampunk_table_top.png", "steampunk_table.png", "steampunk_table.png", "steampunk_table.png", "steampunk_table.png", "steampunk_table.png"},
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
 	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_node("steampunk:light",{
+	drawtype = "glasslike",
+	description = "Light Block",
+	sunlight_propagates = true,
+	light_source = 14,
+	tiles = {"steampunk_light.png"},
+	groups = {cracky=2},
+	paramtype = "light",
 })
 
 
