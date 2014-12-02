@@ -16,7 +16,79 @@ minetest.register_node("steampunk:glass", {
 	is_ground_content = false,
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 	sounds = default.node_sound_glass_defaults(),
-	})
+})
+
+minetest.register_node("steampunk:glass_black", {
+	description = "Steampunk Black Glass",
+	drawtype = "glasslike",
+	tiles = {"steampunk_glass_black.png"},
+	inventory_image = minetest.inventorycube("steampunk_glass_black.png"),
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_node("steampunk:glass_blue", {
+	description = "Steampunk Blue Glass",
+	drawtype = "glasslike",
+	tiles = {"steampunk_glass_blue.png"},
+	inventory_image = minetest.inventorycube("steampunk_glass_blue.png"),
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_node("steampunk:glass_green", {
+	description = "Steampunk Green Glass",
+	drawtype = "glasslike",
+	tiles = {"steampunk_glass_green.png"},
+	inventory_image = minetest.inventorycube("steampunk_glass_green.png"),
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_node("steampunk:glass_magenta", {
+	description = "Steampunk Magenta Glass",
+	drawtype = "glasslike",
+	tiles = {"steampunk_glass_magenta.png"},
+	inventory_image = minetest.inventorycube("steampunk_glass_magenta.png"),
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_node("steampunk:glass_purple", {
+	description = "Steampunk Purple Glass",
+	drawtype = "glasslike",
+	tiles = {"steampunk_glass_purple.png"},
+	inventory_image = minetest.inventorycube("steampunk_glass_purple.png"),
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
+
+minetest.register_node("steampunk:glass_red", {
+	description = "Steampunk Red Glass",
+	drawtype = "glasslike",
+	tiles = {"steampunk_glass_red.png"},
+	inventory_image = minetest.inventorycube("steampunk_glass_red.png"),
+	paramtype = "light",
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky=3,oddly_breakable_by_hand=3},
+	sounds = default.node_sound_glass_defaults(),
+})
 
 minetest.register_node("steampunk:fence", {
 	description = "Steampunk Fence",
@@ -382,9 +454,56 @@ minetest.register_node("steampunk:steelblock", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("steampunk:iron_bars", {
+		description = "Steampunk Iron Bars",
+		drawtype = "nodebox",
+		tiles = {"steampunk_bars.png"},
+		paramtype = "light",
+		paramtype2 = "facedir",
+		groups = {cracky=1,level=2},
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{ -0.5, -0.5, -0.05,  0.5, 0.5,  0.05},
+			},
+		},
+		selection_box = {
+			type = "fixed",
+			fixed = {
+				{ -0.5, -0.5, -0.05,  0.5, 0.5,  0.05},
+			},
+		},
+		is_ground_content = false,
+})
+
 minetest.register_node("steampunk:steelpanel", {
 	description = "Steampunk Steel Panel",
 	tiles = {"steampunk_steelpanel.png"},
+	is_ground_content = true,
+	groups = {cracky=1,level=2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("steampunk:sand", {
+	description = "Steampunk Sand",
+	tiles ={"steampunk_sand.png"},
+	param1 = "light",
+	light_source = 3,
+	groups = {crumbly=3, falling_node=1},
+	sounds = default.node_sound_sand_defaults(),
+})
+
+minetest.register_node("steampunk:copperblock", {
+	description = "Steampunk Copper Block",
+	tiles = {"steampunk_copper_block.png"},
+	is_ground_content = true,
+	groups = {cracky=1,level=2},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("steampunk:copperblock_r", {
+	description = "Steampunk Reinforced Copper Block",
+	tiles = {"steampunk_copper_block_r.png"},
 	is_ground_content = true,
 	groups = {cracky=1,level=2},
 	sounds = default.node_sound_stone_defaults(),
@@ -398,14 +517,21 @@ minetest.register_node("steampunk:mese", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-stairs.register_stair_and_slab("steampunk wood", "steampunk:wood",
+stairs.register_stair_and_slab("steampunk_wood", "steampunk:wood",
 		{snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 		{"steampunk_wood.png"},
 		"Steampunk Wooden Stair",
 		"Steampunk Wooden Slab",
 		default.node_sound_wood_defaults())
 
-stairs.register_stair_and_slab("steampunk cobble", "steampunk:cobble",
+stairs.register_stair_and_slab("steampunk_junglewood", "steampunk:junglewood",
+		{snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
+		{"steampunk_junglewood.png"},
+		"Steampunk Jungle Wood Stair",
+		"Steampunk Jungle Wood Slab",
+		default.node_sound_wood_defaults())
+
+stairs.register_stair_and_slab("steampunk_cobble", "steampunk:cobble",
 		{cracky=3},
 		{"steampunk_cobble.png"},
 		"Steampunk Cobblestone Stair",
@@ -423,7 +549,7 @@ doors.register_door("steampunk:door_steampunk_wood", {
 })
 
 doors.register_door("steampunk:door_steampunk_iron", {
-	description = "Steel Door",
+	description = "Steampunk Iron Door",
 	inventory_image = "steampunk_door_iron.png",
 	groups = {snappy=1,bendy=2,cracky=1,melty=2,level=2,door=1},
 	tiles_bottom = {"steampunk_door_iron_lower.png", "steampunk_door_iron_upper.png"},
