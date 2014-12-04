@@ -11,7 +11,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'steampunk:junglewood 4',
 	recipe = {
-	  {'default:junglewood', 'default:junglewood', 'default:iron_lump'},
+	  {'default:junglewood', '', 'default:junglewood'},
 	  {'', 'default:steel_ingot', ''},
 	  {'default:junglewood', '', 'default:junglewood'},
 	}
@@ -176,7 +176,7 @@ minetest.register_craft({
 	type = "shapeless",
 	output = 'steampunk:glass_green',
 	recipe = 
-		{"steampunk:glass", "dye:green"},
+		{"steampunk:glass", "dye:dark_green"},
 
 })
 
@@ -198,7 +198,7 @@ minetest.register_craft({
 	type = "shapeless",
 	output = 'steampunk:glass_purple',
 	recipe = 
-		{"steampunk:glass", "dye:purple"},
+		{"steampunk:glass", "dye:violet"},
 })
 
 minetest.register_craft({
@@ -210,5 +210,80 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+		output = "stairs:stair_steampunk_wood 6",
+		recipe = {
+			{"steampunk:wood", "", ""},
+			{"steampunk:wood", "steampunk:wood", ""},
+			{"steampunk:wood", "steampunk:wood", "steampunk:wood"},
+		},
+	})
+	
 
+	minetest.register_craft({
+		output = "stairs:stair_steampunk_junglewood 6",
+		recipe = {
+			{"", "", "steampunk:junglewood"},
+			{"", "steampunk:junglewood", "steampunk:junglewood"},
+			{"steampunk:junglewood", "steampunk:junglewood", "steampunk:junglewood"},
+		},
+	})
 
+	minetest.register_craft({
+		output = "stairs:stair_steampunk_cobble 6",
+		recipe = {
+			{"", "", "steampunk:cobble"},
+			{"", "steampunk:cobble", "steampunk:cobble"},
+			{"steampunk:cobble", "steampunk:cobble", "steampunk:cobble"},
+		},
+	})
+	
+minetest.register_craft({
+		output = "stairs:slab_steampunk_wood 6",
+		recipe = {
+			{"steampunk:wood", "steampunk:wood", "steampunk:wood"},
+		},
+	})
+	
+minetest.register_craft({
+		output = "stairs:slab_steampunk_cobble 6",
+		recipe = {
+			{"steampunk:cobble", "steampunk:cobble", "steampunk:cobble"},
+		},
+	})
+	
+
+	
+minetest.register_craft({
+		output = "stairs:slab_steampunk_junglewood 6",
+		recipe = {
+			{"steampunk:junglewood", "steampunk:junglewood", "steampunk:junglewood"},
+		},
+	})
+
+minetest.register_craft({
+	output = 'steampunk:copperblock',
+	recipe = {
+		{"default:copper_ingot", "default:copper_ingot", "default:copper_ingot"},
+		{"default:copper_ingot", "steampunk:wood", "default:copper_ingot"},
+		{"default:copper_ingot", "default:copper_ingot", "default:copper_ingot"},
+	}
+})
+
+minetest.register_craft({
+	output = 'steampunk:copperblock_r',
+	recipe = {
+		{"default:stick", "", "default:stick"},
+		{"", "steampunk:copperblock", ""},
+		{"default:stick", "", "default:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = 'steampunk:table 2',
+	recipe = {
+		{"", "steampunk:glass_purple", ""},
+		{"", "steampunk:wood", ""},
+		{"default:stick", "", "default:stick"},
+	}
+})
