@@ -1,14 +1,20 @@
 
 minetest.register_craft({
-	type = "shapeless",
-	output = 'steampunk:wood 2',
-	recipe = {'default:wood', 'default:wood', 'default:iron_lump'},
+	output = 'steampunk:wood 4',
+	recipe = {
+	      {'default:wood', '', 'default:wood'},
+	      {'', 'steel_ingot', ''},
+	      {'default:wood', '', 'default:wood'},
+	}
 })
 
 minetest.register_craft({
-	type = "shapeless",
-	output = 'steampunk:junglewood 2',
-	recipe = {'default:junglewood', 'default:junglewood', 'default:iron_lump'},
+	output = 'steampunk:junglewood 4',
+	recipe = {
+	  {'default:junglewood', 'default:junglewood', 'default:iron_lump'},
+	  {'', 'default:steel_ingot', ''},
+	  {'default:junglewood', '', 'default:junglewood'},
+	}
 })
 
 minetest.register_craft({
@@ -71,7 +77,7 @@ minetest.register_craft({
 	type = "shapeless",
 	output = 'steampunk:steelblock 2',
 	recipe = 
-		{'default:steelblock', 'default:steelblock', 'default:iron_lump'},
+		{'default:steelblock', 'dye:black'},
 	
 })
 
@@ -79,7 +85,7 @@ minetest.register_craft({
 	type = "shapeless",
 	output = 'steampunk:stonebrick 2',
 	recipe = 
-		{'default:stonebrick', 'default:stonebrick', 'default:iron_lump'},
+		{'default:stonebrick', 'default:stonebrick', 'dye:black'},
 	
 })
 
@@ -110,27 +116,27 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'steampunk:door_steampunk_wood',
 	recipe = {
-		{'steampunk:wood', 'steampunk:wood', ''},
-		{'steampunk:wood', 'steampunk:wood', ''},
-		{'steampunk:wood', 'steampunk:wood', ''},
+		{'default:wood', 'steampunk:wood', ''},
+		{'steampunk:wood', 'default:wood', ''},
+		{'default:wood', 'steampunk:wood', ''},
 	}
 })
 
 minetest.register_craft({
 	output = 'steampunk:door_steampunk_iron',
 	recipe = {
-		{'steampunk:steelblock', 'steampunk:steelblock', ''},
-		{'steampunk:steelblock', 'steampunk:steelblock', ''},
-		{'steampunk:steelblock', 'steampunk:steelblock', ''},
+		{'steampunk:wood', 'default:steel_ingot', ''},
+		{'steampunk:wood', 'default:steel_ingot', ''},
+		{'steampunk:wood', 'default:steel_ingot', ''},
 	}
 })
 
 minetest.register_craft({
-	output = 'steampunk:trapdoor 2',
+	output = 'steampunk:trapdoor',
 	recipe = {
-		{'steampunk:wood', 'steampunk:wood', 'steampunk:wood'},
-		{'steampunk:wood', 'steampunk:wood', 'steampunk:wood'},
-		{'', '', ''},
+		{'default:stick', '', 'default:stick'},
+		{'', 'steampunk:wood', ''},
+		{'default:stick', '', 'default:stick'},
 	}
 })
 
@@ -144,9 +150,65 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'steampunk:steelpanel 2',
+	output = 'steampunk:steelpanel 4',
 	recipe = {
 		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+		{"default:wood", "default:wood", "default:wood"},
 	}
 })
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'steampunk:glass_black',
+	recipe = 
+		{"steampunk:glass", "dye:black"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'steampunk:glass_blue',
+	recipe = 
+		{"steampunk:glass", "dye:blue"},
+
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'steampunk:glass_green',
+	recipe = 
+		{"steampunk:glass", "dye:green"},
+
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'steampunk:glass_red',
+	recipe = 
+		{"steampunk:glass", "dye:red"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'steampunk:glass_magenta',
+	recipe = 
+		{"steampunk:glass", "dye:magenta"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = 'steampunk:glass_purple',
+	recipe = 
+		{"steampunk:glass", "dye:purple"},
+})
+
+minetest.register_craft({
+	output = 'steampunk:bookshelf 2',
+	recipe = {
+		 {'steampunk:wood', 'default:wood', 'steampunk:wood'},
+		 {'default:book', 'default:book', 'default:book'},
+		 {'steampunk:wood', 'default:wood', 'steampunk:wood'},
+	}
+})
+
+
+

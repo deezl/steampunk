@@ -26,6 +26,7 @@ minetest.register_node("steampunk:glass_black", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = false,
+	light_source = 5,
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -38,6 +39,7 @@ minetest.register_node("steampunk:glass_blue", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = false,
+	light_source = 5,
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -50,6 +52,7 @@ minetest.register_node("steampunk:glass_green", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = false,
+	light_source = 5,
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -62,6 +65,7 @@ minetest.register_node("steampunk:glass_magenta", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = false,
+	light_source = 5,
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -74,6 +78,7 @@ minetest.register_node("steampunk:glass_purple", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = false,
+	light_source = 5,
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -86,6 +91,7 @@ minetest.register_node("steampunk:glass_red", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = false,
+	light_source = 5,
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -538,7 +544,7 @@ stairs.register_stair_and_slab("steampunk_cobble", "steampunk:cobble",
 		"Steampunk Cobblestone Slab",
 		default.node_sound_stone_defaults())
 
-doors.register_door("steampunk:door_steampunk_wood", {
+doors:register_door("steampunk:door_steampunk_wood", {
 	description = "Steampunk Wooden Door",
 	inventory_image = "steampunk_door_wood.png",
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=2,door=1},
@@ -548,7 +554,7 @@ doors.register_door("steampunk:door_steampunk_wood", {
 	sunlight = false,
 })
 
-doors.register_door("steampunk:door_steampunk_iron", {
+doors:register_door("steampunk:door_steampunk_iron", {
 	description = "Steampunk Iron Door",
 	inventory_image = "steampunk_door_iron.png",
 	groups = {snappy=1,bendy=2,cracky=1,melty=2,level=2,door=1},
