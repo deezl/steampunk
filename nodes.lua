@@ -495,7 +495,7 @@ minetest.register_node("steampunk:sand", {
 	tiles ={"steampunk_sand.png"},
 	param1 = "light",
 	light_source = 3,
-	groups = {crumbly=3, falling_node=1},
+	groups = {crumbly=3},
 	sounds = default.node_sound_sand_defaults(),
 })
 
@@ -542,6 +542,62 @@ stairs.register_stair_and_slab("steampunk_cobble", "steampunk:cobble",
 		{"steampunk_cobble.png"},
 		"Steampunk Cobblestone Stair",
 		"Steampunk Cobblestone Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_stonebrick", "steampunk:stonebrick",
+		{cracky=2, stone=1},
+		{"steampunk_stonebrick.png"},
+		"Steampunk Stonebrick Stair",
+		"Steampunk Stonebrick Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_brick", "steampunk:brick",
+		{cracky=3},
+		{"steampunk_brick.png"},
+		"Steampunk Brick Stair",
+		"Steampunk Brick Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_brick_grey", "steampunk:brick_grey",
+		{cracky=3},
+		{"steampunk_brick_grey.png"},
+		"Steampunk Grey Brick Stair",
+		"Steampunk Grey Brick Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_steelpanel", "steampunk:steelpanel",
+		cracky=1,level=2},
+		{"steampunk_steelpanel.png"},
+		"Steampunk Steel Panel Stair",
+		"Steampunk Steel Panel Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_steelblock", "steampunk:steelblock",
+		cracky=1,level=2},
+		{"steampunk_steelblock.png"},
+		"Steampunk Steel Block Stair",
+		"Steampunk Steel Block Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_copperblock", "steampunk:copperblock",
+		cracky=1,level=2},
+		{"steampunk_copperblock.png"},
+		"Steampunk Copper Block Stair",
+		"Steampunk Copper Block Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_copperblock_r", "steampunk:copperblock_r",
+		cracky=1,level=2},
+		{"steampunk_copperblock_r.png"},
+		"Steampunk Reinforced Copper Block Stair",
+		"Steampunk Reinforced Copper Block Slab",
+		default.node_sound_stone_defaults())
+
+stairs.register_stair_and_slab("steampunk_mese", "steampunk:mese",
+		cracky=1,level=2},
+		{"steampunk_mese.png"},
+		"Steampunk Mese Stair",
+		"Steampunk Mese Slab",
 		default.node_sound_stone_defaults())
 
 doors:register_door("steampunk:door_steampunk_wood", {
